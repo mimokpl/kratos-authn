@@ -11,8 +11,8 @@ require (
 	github.com/go-kratos/kratos/v2 v2.9.2
 	github.com/golang-jwt/jwt/v5 v5.3.1
 	github.com/stretchr/testify v1.11.1
-	github.com/mimokpl/kratos-authn v1.1.11
-	github.com/mimokpl/kratos-authn/engine/jwt v1.1.11
+	github.com/mimokpl/kratos-authn v1.1.1
+	github.com/mimokpl/kratos-authn/engine/jwt v1.1.1
 )
 
 require (

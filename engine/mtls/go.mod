@@ -6,7 +6,7 @@ replace github.com/mimokpl/kratos-authn => ../../
 
 require (
 	github.com/stretchr/testify v1.11.1
-	github.com/mimokpl/kratos-authn v1.1.11
+	github.com/mimokpl/kratos-authn v1.1.1
 )
 
 require (
