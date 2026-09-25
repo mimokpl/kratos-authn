@@ -10,8 +10,8 @@ import (
 
 	jwtV5 "github.com/golang-jwt/jwt/v5"
 
-	"github.com/go-kratos/kratos/v2/errors"
-	"github.com/go-kratos/kratos/v2/transport"
+	"github.com/go-kratos/kratos/v3/errors"
+	"github.com/go-kratos/kratos/v3/transport"
 
 	"github.com/mimokpl/kratos-authn/engine"
 	"github.com/mimokpl/kratos-authn/engine/jwt"
