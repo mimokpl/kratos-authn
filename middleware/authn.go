@@ -3,7 +3,7 @@ package middleware
 import (
 	"context"
 
-	"github.com/go-kratos/kratos/v2/log"
+	log "github.com/mimokpl/kratos-bootstrap/logger"
 	"github.com/go-kratos/kratos/v3/middleware"
 
 	"github.com/mimokpl/kratos-authn/engine"
@@ -22,7 +22,7 @@ func Server(authenticator engine.Authenticator, opts ...Option) middleware.Middl
 		return func(ctx context.Context, req interface{}) (interface{}, error) {
 			claims, err := authenticator.Authenticate(ctx, engine.ContextTypeKratosMetaData)
 			if err != nil {
-				o.log.Errorf("authenticator middleware authenticate failed: %s", err.Error())
+				o.log.Errorf(ctx, "authenticator middleware authenticate failed: %s", err.Error())
 				return nil, ErrUnauthorized
 			}
 
@@ -46,7 +46,7 @@ func Client(authenticator engine.Authenticator, opts ...Option) middleware.Middl
 		return func(ctx context.Context, req interface{}) (interface{}, error) {
 			var err error
 			if ctx, err = authenticator.CreateIdentityWithContext(ctx, engine.ContextTypeKratosMetaData, o.claims); err != nil {
-				o.log.Errorf("authenticator middleware create token failed: %s", err.Error())
+				o.log.Errorf(ctx, "authenticator middleware create token failed: %s", err.Error())
 			}
 			return handler(ctx, req)
 		}
