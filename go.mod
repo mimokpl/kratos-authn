@@ -6,7 +6,7 @@ require (
 	github.com/go-kratos/kratos/v3 v3.0.0
 	github.com/golang-jwt/jwt/v5 v5.3.1
 	github.com/grpc-ecosystem/go-grpc-middleware v1.4.0
-	github.com/stretchr/testify v1.11.1
+	github.com/stretchr/testify v1.12.1
 	google.golang.org/grpc v1.81.0
 )
 
