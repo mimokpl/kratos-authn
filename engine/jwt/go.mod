@@ -5,7 +5,7 @@ go 1.25.0
 require (
 	github.com/go-kratos/kratos/v3 v3.0.0
 	github.com/golang-jwt/jwt/v5 v5.3.1
-	github.com/mimokpl/kratos-authn v1.9.1
+	github.com/mimokpl/kratos-authn v1.9.2
 	github.com/stretchr/testify v1.11.1
 )
 
